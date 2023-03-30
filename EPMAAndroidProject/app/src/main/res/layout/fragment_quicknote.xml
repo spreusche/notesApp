@@ -3,40 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="122dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
-        android:text="QuickNote"
+    <EditText
+        android:id="@+id/noteTitle"
+        android:layout_width="224dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/title"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/saveNote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="72dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
-
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/newNoteET"
         android:layout_width="331dp"
         android:layout_height="254dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
-        android:background="#FDD835"
+        android:layout_marginTop="8dp"
+        android:background="@color/noteColor"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Note..."
+        android:hint="@string/note"
         android:inputType="textMultiLine"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/noteTitle" />
+
+    <Button
+        android:id="@+id/saveNote"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/buttons"/>
+
+    <Button
+        android:id="@+id/myNotesBtn"
+        android:layout_width="333dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/my_notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newNoteET"
+        android:backgroundTint="@color/buttons"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

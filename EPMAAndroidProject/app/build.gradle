@@ -27,9 +27,39 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        app1 {
+            dimension "version"
+            applicationIdSuffix ".app1"
+            versionNameSuffix "-app1"
+        }
+        app2 {
+            dimension "version"
+            applicationIdSuffix ".app2"
+            versionNameSuffix "-app2"
+        }
+    }
 }
 
 dependencies {
+
+    def lifecycle_version = "2.5.0"
+    def arch_version = "2.1.0"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    implementation "androidx.room:room-runtime:$lifecycle_version"
+    annotationProcessor "androidx.room:room-compiler:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -39,4 +69,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
 }

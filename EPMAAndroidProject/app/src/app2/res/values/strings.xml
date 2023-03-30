@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">EPMA Android Project</string>
     <string name="title_activity_main">QuickNotes</string>
-    <string name="note">Note…</string>
+    <string name="note">Note...</string>
     <string name="title">Title</string>
     <string name="save">Save</string>
     <string name="quicknote">QuickNote</string>
-    <string name="my_notes">My notes</string>
 </resources>

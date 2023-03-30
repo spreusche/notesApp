@@ -6,12 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/navhost"
+        android:id="@+id/navHost"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_path"
         tools:layout="@layout/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 </FrameLayout>
